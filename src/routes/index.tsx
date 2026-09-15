@@ -126,26 +126,28 @@ function Index() {
   return (
     <main className="film-grain min-h-dvh bg-background">
       <header className="fixed inset-x-0 top-0 z-40 flex h-16 items-center justify-between border-b border-border/60 bg-background/90 px-5 backdrop-blur-md sm:px-8">
-        <button
+        <Button
           type="button"
           onClick={() => setView("drop")}
-          className="font-display text-sm uppercase text-foreground"
+          variant="ghost"
+          className="h-auto rounded-none p-0 font-display text-sm uppercase text-foreground hover:bg-transparent"
         >
           A/H
-        </button>
+        </Button>
         <nav aria-label="Release navigation" className="flex items-center gap-7">
           {(["drop", "merch"] as const).map((item) => (
-            <button
+            <Button
               key={item}
               type="button"
               onClick={() => setView(item)}
+              variant="ghost"
               className={`relative py-2 text-[0.62rem] font-semibold uppercase tracking-[0.17em] transition-colors ${
-                view === item ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                view === item ? "text-foreground" : "text-muted-foreground hover:bg-transparent hover:text-foreground"
               }`}
             >
               {item === "drop" ? "Exclusive" : "Merch"}
               {view === item && <span className="absolute inset-x-0 -bottom-1 h-px bg-foreground" />}
-            </button>
+            </Button>
           ))}
         </nav>
       </header>
