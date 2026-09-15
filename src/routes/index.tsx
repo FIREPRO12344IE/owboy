@@ -101,7 +101,7 @@ function Index() {
 
         <footer className="flex justify-between text-[0.58rem] uppercase tracking-[0.16em] text-muted-foreground">
           <span>For your eyes only</span>
-          <span>London</span>
+          <span>Lincoln</span>
         </footer>
       </main>
     );
@@ -185,7 +185,7 @@ function Index() {
 
             <div className="lg:py-12">
               <p className="mb-4 text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                Edwin Vinil presents
+                OW BOY
               </p>
               <h1 className="font-display text-[clamp(3.2rem,14vw,8.5rem)] leading-[0.82] uppercase lg:text-[clamp(4.5rem,7vw,8.5rem)]">
                 After<br />Hours
@@ -198,6 +198,16 @@ function Index() {
                 <Button variant="label" size="label" onClick={() => setPlaying((value) => !value)}>
                   {playing ? <Pause /> : <Play />}
                   {playing ? "Pause" : "Listen now"}
+                </Button>
+                <Button variant="label-outline" size="label" asChild>
+                  <a
+                    href="https://open.spotify.com/artist/5l3tkuSSuqi6X1zGlSyIDX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ArrowUpRight />
+                    Spotify
+                  </a>
                 </Button>
                 <Button variant="label-outline" size="label" asChild>
                   <a href={coverArt} download="after-hours-artwork.jpg">
