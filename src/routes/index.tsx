@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDownToLine, ArrowRight, Pause, Play } from "lucide-react";
+import { ArrowDownToLine, ArrowRight, ArrowUpRight, Pause, Play } from "lucide-react";
 import { FormEvent, useEffect, useState } from "react";
 
 import coverArt from "@/assets/after-hours-cover.jpg";
