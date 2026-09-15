@@ -11,12 +11,12 @@ export const Route = createFileRoute("/")({
       { title: "After Hours — Private Access" },
       {
         name: "description",
-        content: "Private access to After Hours, an exclusive new music release.",
+        content: "Private access to After Hours, the exclusive new release from OW BOY.",
       },
       { property: "og:title", content: "After Hours — Private Access" },
       {
         property: "og:description",
-        content: "Private access to After Hours, an exclusive new music release.",
+        content: "Private access to After Hours, the exclusive new release from OW BOY.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
