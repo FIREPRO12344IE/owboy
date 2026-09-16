@@ -3,6 +3,7 @@ import { ArrowDownToLine, ArrowRight, ArrowUpRight, Pause, Play } from "lucide-r
 import { FormEvent, useEffect, useState } from "react";
 
 import coverArt from "@/assets/after-hours-cover.jpg";
+import owBoyLogo from "@/assets/ow-boy-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -130,9 +131,16 @@ function Index() {
           type="button"
           onClick={() => setView("drop")}
           variant="ghost"
-          className="h-auto rounded-none p-0 font-display text-sm uppercase text-foreground hover:bg-transparent"
+          className="h-auto rounded-none p-0 hover:bg-transparent"
+          aria-label="OW BOY — back to exclusive release"
         >
-          A/H
+          <img
+            src={owBoyLogo.url}
+            alt="OW BOY logo"
+            width={36}
+            height={36}
+            className="h-9 w-9 object-cover"
+          />
         </Button>
         <nav aria-label="Release navigation" className="flex items-center gap-7">
           {(["drop", "merch"] as const).map((item) => (
