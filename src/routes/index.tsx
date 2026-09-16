@@ -74,7 +74,7 @@ function Index() {
             >
               Access code
             </label>
-            <div className="flex border-b border-border focus-within:border-foreground">
+            <div className="flex border-b border-border focus-within:border-purple">
               <input
                 id="access-code"
                 value={code}
@@ -117,7 +117,7 @@ function Index() {
           <h1 className="font-display text-[clamp(3.5rem,18vw,9rem)] leading-[0.85] uppercase">
             Welcome<br />inside.
           </h1>
-          <div className="mx-auto mt-8 h-px w-16 bg-foreground" />
+          <div className="mx-auto mt-8 h-px w-16 bg-purple" />
         </div>
       </main>
     );
@@ -146,7 +146,7 @@ function Index() {
               }`}
             >
               {item === "drop" ? "Exclusive" : "Merch"}
-              {view === item && <span className="absolute inset-x-0 -bottom-1 h-px bg-foreground" />}
+              {view === item && <span className="absolute inset-x-0 -bottom-1 h-px bg-purple" />}
             </Button>
           ))}
         </nav>
@@ -224,7 +224,7 @@ function Index() {
                 <span>{playing ? "Now playing" : "Private preview"}</span>
               </div>
               <div className="mt-3 h-px overflow-hidden bg-border">
-                <div className={`h-full bg-foreground ${playing ? "w-2/5 transition-all duration-[4000ms]" : "w-0"}`} />
+                <div className={`h-full bg-gradient-to-r from-purple to-purple-glow ${playing ? "w-2/5 transition-all duration-[4000ms]" : "w-0"}`} />
               </div>
             </div>
           </div>
