@@ -188,9 +188,19 @@
   animation: cinematic-reveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+@keyframes slow-zoom {
+  from { transform: scale(1.06); }
+  to { transform: scale(1.14); }
+}
+
+@utility slow-zoom {
+  animation: slow-zoom 24s ease-out forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .film-grain::after,
-  .cinematic-reveal {
+  .cinematic-reveal,
+  .slow-zoom {
     animation: none;
   }
 }
