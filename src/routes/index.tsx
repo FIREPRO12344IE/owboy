@@ -171,14 +171,22 @@ function Index() {
         </section>
       ) : (
         <section className="cinematic-reveal mx-auto grid min-h-dvh max-w-[1500px] grid-cols-1 pt-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
-          <div className="relative min-h-[67svh] overflow-hidden lg:min-h-[calc(100dvh-4rem)]">
+          <div className="relative min-h-[67svh] overflow-hidden bg-[#0b0b0b] lg:min-h-[calc(100dvh-4rem)]">
             <img
               src={artistPhoto.url}
               alt="OW BOY in a dark underground car park"
               width={1506}
               height={1005}
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              onLoad={() => setArtworkReady(true)}
+              onError={() => setArtworkReady(true)}
+              className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1200ms] ease-out ${
+                artworkReady ? "slow-zoom opacity-100" : "opacity-0"
+              }`}
             />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_85%_at_50%_35%,transparent_35%,rgba(0,0,0,0.55)_100%)]" />
             <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent lg:hidden" />
             <p className="absolute bottom-5 left-5 text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-foreground/70 lg:bottom-8 lg:left-8">
               Original artwork / 2026
