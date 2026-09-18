@@ -35,6 +35,7 @@ function Index() {
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
   const [playing, setPlaying] = useState(false);
+  const [artworkReady, setArtworkReady] = useState(false);
 
   useEffect(() => {
     if (stage !== "welcome") return;
