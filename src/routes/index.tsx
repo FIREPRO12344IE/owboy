@@ -136,7 +136,7 @@ function Index() {
           aria-label="OW BOY — back to exclusive release"
         >
           <img
-            src={owBoyLogo.url}
+            src={owBoyLogo}
             alt="OW BOY logo"
             width={36}
             height={36}
@@ -174,7 +174,7 @@ function Index() {
         <section className="cinematic-reveal mx-auto grid min-h-dvh max-w-[1500px] grid-cols-1 pt-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
           <div className="relative min-h-[67svh] overflow-hidden bg-[#0b0b0b] lg:min-h-[calc(100dvh-4rem)]">
             <img
-              src={artistPhoto.url}
+              src={artistPhoto}
               alt="OW BOY in a dark underground car park"
               width={1506}
               height={1005}
@@ -227,7 +227,7 @@ function Index() {
                   </a>
                 </Button>
                 <Button variant="label-outline" size="label" asChild>
-                  <a href={artistPhoto.url} download="ow-boy-artist.jpg">
+                  <a href={artistPhoto} download="ow-boy-artist.jpg">
                     <ArrowDownToLine />
                     Download
                   </a>
