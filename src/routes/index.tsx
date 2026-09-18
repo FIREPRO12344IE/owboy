@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownToLine, ArrowRight, ArrowUpRight, Pause, Play } from "lucide-react";
 import { FormEvent, useEffect, useState } from "react";
 
-import artistPhoto from "@/assets/ow-boy-artist.jpg.asset.json";
-import owBoyLogo from "@/assets/ow-boy-logo-official.png.asset.json";
+import artistPhoto from "@/assets/ow-boy-artist.jpg";
+import owBoyLogo from "@/assets/ow-boy-logo-official.png";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
