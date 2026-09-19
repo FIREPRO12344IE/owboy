@@ -172,7 +172,7 @@ function Index() {
         </section>
       ) : (
         <section className="cinematic-reveal mx-auto grid min-h-dvh max-w-[1500px] grid-cols-1 pt-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
-          <div className="relative min-h-[67svh] overflow-hidden bg-card lg:min-h-[calc(100dvh-4rem)]">
+          <div className="relative aspect-video overflow-hidden bg-card lg:aspect-auto lg:min-h-[calc(100dvh-4rem)]">
             <img
               src={artistPhoto}
               alt=""
