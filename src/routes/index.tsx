@@ -3,6 +3,7 @@ import { ArrowDownToLine, ArrowRight, ArrowUpRight, Pause, Play } from "lucide-r
 import { FormEvent, useEffect, useState } from "react";
 
 import artistPhoto from "@/assets/ow-boy-artist.jpg";
+import merchPhoto from "@/assets/ow-boy-merch.jpg";
 import owBoyLogo from "@/assets/ow-boy-logo-official.png";
 import { Button } from "@/components/ui/button";
 
@@ -162,13 +163,39 @@ function Index() {
       </header>
 
       {view === "merch" ? (
-        <section className="cinematic-reveal flex min-h-dvh flex-col items-center justify-center px-5 text-center">
-          <p className="mb-5 text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-            Private goods / 001
-          </p>
-          <h1 className="font-display text-[clamp(3.5rem,17vw,9rem)] leading-[0.86] uppercase">
-            Coming<br />soon.
-          </h1>
+        <section className="cinematic-reveal relative min-h-dvh overflow-hidden bg-card pt-16">
+          <img
+            src={merchPhoto}
+            alt="OW BOY standing in a blue-lit underground car park"
+            width={1506}
+            height={1005}
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover object-[48%_center]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/35 via-transparent to-transparent" />
+
+          <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-4rem)] max-w-[1500px] flex-col justify-between px-5 pb-8 pt-6 sm:px-8 sm:pb-10 lg:px-12 lg:pb-12 lg:pt-10">
+            <div className="flex items-center justify-between text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-foreground/70">
+              <span>Private goods / 001</span>
+              <span>Lincoln / 2026</span>
+            </div>
+
+            <div className="max-w-5xl">
+              <div className="mb-5 h-1 w-14 bg-purple" />
+              <p className="mb-3 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-foreground/75">
+                OW BOY official merchandise
+              </p>
+              <h1 className="font-display text-[clamp(4rem,19vw,11rem)] leading-[0.8] uppercase text-foreground">
+                Coming<br />soon.
+              </h1>
+              <div className="mt-7 flex items-center justify-between border-t border-foreground/25 pt-4 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-foreground/70 sm:max-w-xl">
+                <span>First collection</span>
+                <span>Private access</span>
+              </div>
+            </div>
+          </div>
         </section>
       ) : (
         <section className="cinematic-reveal mx-auto grid min-h-dvh max-w-[1500px] grid-cols-1 pt-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
