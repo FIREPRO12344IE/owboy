@@ -172,24 +172,30 @@ function Index() {
         </section>
       ) : (
         <section className="cinematic-reveal mx-auto grid min-h-dvh max-w-[1500px] grid-cols-1 pt-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
-          <div className="relative min-h-[67svh] overflow-hidden bg-[#0b0b0b] lg:min-h-[calc(100dvh-4rem)]">
+          <div className="relative min-h-[67svh] overflow-hidden bg-card lg:min-h-[calc(100dvh-4rem)]">
             <img
               src={artistPhoto}
-              alt="OW BOY in a dark underground car park"
-              width={1506}
-              height={1005}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full scale-110 object-cover opacity-35 blur-2xl"
+            />
+            <img
+              src={artistPhoto}
+              alt="Close portrait of OW BOY wearing a black-and-white bucket hat against a yellow backdrop"
+              width={1920}
+              height={902}
               loading="eager"
               decoding="async"
               fetchPriority="high"
               onLoad={() => setArtworkReady(true)}
               onError={() => setArtworkReady(true)}
-              className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1200ms] ease-out ${
-                artworkReady ? "slow-zoom opacity-100" : "opacity-0"
+              className={`absolute inset-0 z-10 h-full w-full object-contain object-center transition-[opacity,transform] duration-[1200ms] ease-out ${
+                artworkReady ? "scale-100 opacity-100" : "scale-[1.025] opacity-0"
               }`}
             />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_85%_at_50%_35%,transparent_35%,rgba(0,0,0,0.55)_100%)]" />
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent lg:hidden" />
-            <p className="absolute bottom-5 left-5 text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-foreground/70 lg:bottom-8 lg:left-8">
+            <div className="artwork-vignette pointer-events-none absolute inset-0 z-20" />
+            <div className="absolute inset-x-0 bottom-0 z-20 h-40 bg-gradient-to-t from-background to-transparent lg:hidden" />
+            <p className="absolute bottom-5 left-5 z-30 text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-foreground/70 lg:bottom-8 lg:left-8">
               Original artwork / 2026
             </p>
           </div>
